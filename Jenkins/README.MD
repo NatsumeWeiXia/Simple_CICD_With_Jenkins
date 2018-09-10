@@ -20,4 +20,5 @@ Email Extension Plugin 插件提供邮件模板功能，可以让我们以一种
              to: "songyang@XXXXXX.com",
              recipientProviders: [[$class: 'DevelopersRecipientProvider']]
         )</code></pre>
+        
 其中 body:'${JELLY_SCRIPT,template="mail-failure"}' 语句中的 template= 后填写你想试用的模板文件名
