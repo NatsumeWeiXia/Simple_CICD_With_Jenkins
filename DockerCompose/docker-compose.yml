@@ -1,0 +1,21 @@
+//指定版本
+version: '2'
+
+//要启动的容器列表
+services:
+  //要启动的容器
+  mos:
+    //镜像
+    image: 172.16.41.2/XXX:xxx
+    //环境变量
+    environment:
+      - XXX_DB_IP=172.16.41.15
+    //端口
+    ports:
+      - "8080:8080"
+    //卷
+    volumes:
+      - /some/dir:/some/dir
+    //依赖于 可以实现容器按顺序启动
+    depends_on:
+      - someothercontainer

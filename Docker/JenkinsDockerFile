@@ -1,0 +1,15 @@
+FROM jenkins
+
+USER root
+
+RUN apt-get update && apt-get install -y libltdl7
+
+
+ARG dockerGid=999
+
+RUN echo "docker:x:${dockerGid}:jenkins" >> /etc/group
+
+USER jenkins
+
+
+
